@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time Clock Web Server</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!--link href="${bootstrapCss}" rel="stylesheet" /-->
+    <link rel="stylesheet" href="webjars/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <!--link href="${coreCss}" rel="stylesheet" /-->
+</head>
+<body>
+
+<nav class="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
+
+    <a class="navbar-brand" href="#">
+        <img src="assets/Company-Logo-Placeholder.jpg" alt="Company Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Time Sheet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Admin</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container" style="padding-top:10px;">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h1>Time Clock Web Server</h1>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <!--p class="lead">This site is used to review time clock punch times as well as user
+                        administration.</p-->
+                </div>
+            </div>
+        </div>
+
+        <form action="auth/login" method="post" name="LoginForm">
+            <div class="form-group row">
+                <label for="inputUsername" class="col-sm-4 col-form-label text-right">Username</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label text-right">Password</label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10 text-center">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+        </form>
+
+<!--
+        <form class="form" action="auth/login" method="post" name="LoginForm">
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Login:</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-2 text-right">
+                        <label class="label">Username:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="username">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                        <label>Password:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <input class="btn btn-primary btn-lg" type="submit" value="Login">
+                    </div>
+
+                    <p th:text="Login result: ${authResult}"></p>
+                </div>
+
+        </form>
+-->
+    </div>
+
+    <p>Get your greeting <a href="/greeting">here</a></p>
+    <p>Create users: <a href="/admin">here</a></p>
+
+</main>
+<!--
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Spring 3 MVC Project</a>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>${title}</h1>
+        <p>
+            <c:if test="${not empty name}">
+                Hello ${name}
+            </c:if>
+
+            <c:if test="${empty name}">
+                Welcome Welcome!
+            </c:if>
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>ABC</p>
+            <p>
+                <a class="btn btn-default" href="#" role="button">View details</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>ABC</p>
+            <p>
+                <a class="btn btn-default" href="#" role="button">View details</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>ABC</p>
+            <p>
+                <a class="btn btn-default" href="#" role="button">View details</a>
+            </p>
+        </div>
+    </div>
+
+
+    <hr>
+    <footer>
+
+    </footer>
+</div>
+-->
+
+<!--script th:src="@{/js/bootstrap.min.js}"></script-->
+<script type="text/javascript" th:src="webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+</body>
+</html>
